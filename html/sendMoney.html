@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Dinero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sendmoney.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-2"></div>
+            <div class="col col-lg-8">
+
+                <h3>El monto en su wallet digital es $<span id="transferCash">100000</span></h3>
+
+                <h3>Contactos</h3>
+
+                <button type="submit" class="btn btn-primary mb-3"" id=" watchContactButton">Mostrar Contactos</button>
+
+                <!-- lista de contactos -->
+
+                <div class="list-group" id="contactList" style="display: none;">
+                    <div class="cardContact" style="width: 20rem;">
+                        <img src="../img/sendMoney/moe_szylak.png" class="card-img-top" alt="imagen moe_szylak"
+                            style="border-radius: 50px; margin: 2px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Moe Szylak</h5>
+                            <p class="card-text" style="width: 20rem;">Cantinero del bar de Moe</p>
+                        </div>
+                        <button class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#modalTransfers">Transferir</button>
+                    </div>
+
+                    <div class="cardContact" style="width: 20rem;">
+                        <img src="../img/sendMoney/montgomery_burns.png" class="card-img-top" alt="imagen moe_szylak"
+                            style="border-radius: 50px; margin: 2px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Montgomery Burns</h5>
+                            <p class="card-text" style="width: 20rem;">Señor Burn dueño de la planta nuclear</p>
+                        </div>
+                        <button class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#modalTransfers">Transferir</button>
+                    </div>
+
+                    <div class="cardContact" style="width: 20rem;">
+                        <img src="../img/sendMoney/barney_gumble.png" class="card-img-top" alt="imagen barney_gumble"
+                            style="border-radius: 50px; margin: 2px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Barney Gumble</h5>
+                            <p class="card-text" style="width: 20rem;">Borrachito local</p>
+                        </div>
+                        <button class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#modalTransfers">Transferir</button>
+                    </div>
+
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary mb-3"" id=" hideContactButton"
+                    style="display: none;">Ocultar Contactos</button>
+                <!-- lista de contactos -->
+
+
+            </div>
+
+
+            <div class="col col-lg-2"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modalTransfers">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-tittle">Transferir</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p> Monto</p>
+                    <input type="number" placeholder="Ingrese la cantidad" id="transferCashInput" min="1">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalConfirmation">Transferir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modalConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Transferencia exitosa</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"
+                        id="transferCashButton">Aceptar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="../javascript/scriptSendMoney.js"></script>
+</body>
+
+</html>

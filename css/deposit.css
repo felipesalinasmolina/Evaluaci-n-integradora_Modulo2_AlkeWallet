@@ -1,0 +1,33 @@
+input{
+    display: block;
+    border: solid;
+
+}
+
+label{
+    color: black;
+}
+body, section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+form{
+    max-width: 70%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body{
+    background-image: url(../Diapo-5-Nota-de-blog.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:cover;
+    padding: 200´x;
+}
